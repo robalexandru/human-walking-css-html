@@ -1,0 +1,268 @@
+body {
+  background: #84aff4;
+}
+
+.human{
+  position: relative;
+  margin-left: 150px;
+  margin-top: 180px;
+  width: 60px;
+}
+
+.head {
+  width: 80px;
+  height: 130px;
+}
+
+.head .skull {
+  position: absolute;
+  background: #eebb99;
+  width: 80px;
+  height: 80px;
+  border-radius: 40% 30% 30% 60%;
+  top: 30px;
+  left: -3px;
+}
+
+.head .neck {
+  position: absolute;
+  background: #eebb99;
+  width: 30px;
+  height: 40px;
+  top: 90px;
+  left: 15px;
+}
+
+.torso {
+  position: absolute;
+  background: blue;
+  width: 60px;
+  height: 220px;
+  border-radius: 30%;
+  z-index: 20;
+}
+
+.arm {
+  position: absolute;
+}
+
+.arm.right {
+  width: 35px;
+  border-radius: 30%;
+  left: 5px;
+  z-index: 30;
+}
+
+.arm.left {
+  width: 35px;
+  border-radius: 30%;
+  left: 5px;
+  z-index: 10;
+}
+
+.arm .upperarm {
+  width: 35px;
+  height: 120px;
+  background: #eebb99;
+  border-radius: 50%;
+}
+
+.arm .forearm {
+  width: 28px;
+  height: 140px;
+  background: #eebb99;
+  border-radius: 50%;
+  margin-left: 3px;
+  margin-top: -35px;
+}
+
+.leg {
+  position: absolute;
+  top: 340px;
+}
+
+.leg.right {
+  width: 40px;
+  height: 230px;
+  left: 20px;
+  z-index: 15;
+}
+
+.leg.left {
+  width: 40px;
+  height: 230px;
+  left: 20px;
+  z-index: 11;
+}
+
+.leg .thigh {
+  width: 40px;
+  height: 110px;
+  background: red;
+  border-radius: 30% 20% 60% 60%;
+  ;
+  margin-top: 5px;
+  margin-left: -20px;
+  transform: rotate(20deg);
+}
+
+.leg .shin {
+  width: 25px;
+  height: 100px;
+  background: red;
+  border-radius: 30% 30% 40% 40%;
+  margin-top: -10px;
+  margin-left: -45px;
+  transform: rotate(20deg);
+}
+
+.leg .foot {
+  width: 40px;
+  height: 20px;
+  background: black;
+  border-radius: 100%;
+  margin-left: -54px;
+  margin-top: -6px;
+}
+
+.upperarm-animation-r {
+  animation: 1s infinite linear alternate upperarm-animation-r;
+}
+
+@keyframes upperarm-animation-r {
+  0% {
+    transform: none;
+  }
+
+  100% {
+    transform: rotate(-20deg);
+    transform-origin: center top;
+  }
+}
+
+.forearm-animation-r {
+  animation: 1s infinite linear alternate forearm-animation-r;
+}
+
+@keyframes forearm-animation-r{
+  0% {
+    transform: none;
+  }
+
+  100% {
+    margin-left: 90px;
+    margin-top: -65px;
+    transform: rotate(-70deg);
+  }
+}
+
+.upperarm-animation-l {
+  animation: 1s infinite linear alternate upperarm-animation-l;
+}
+
+@keyframes upperarm-animation-l {
+  0% {
+    transform: rotate(-20deg);
+    transform-origin: center top;
+  }
+
+  100% {
+    transform: none;
+  }
+}
+
+.forearm-animation-l {
+  animation: 1s infinite linear alternate forearm-animation-l;
+}
+
+@keyframes forearm-animation-l {
+  0% {
+    margin-left: 90px;
+    margin-top: -65px;
+    transform: rotate(-70deg);
+  }
+
+  100% {
+    transform: none;
+  }
+}
+
+.thigh-animation-r {
+  animation: 1s infinite linear alternate thigh-animation-r;
+}
+
+@keyframes thigh-animation-r {
+  0% {
+  }
+
+  100% {
+    border-radius: 60% 20% 60% 60%;
+    ;
+  margin-top: -5px;
+    margin-left: 30px;
+    transform: rotate(-60deg);
+  }
+}
+
+.shin-animation-r {
+  animation: 1s infinite linear alternate shin-animation-r;
+}
+
+@keyframes shin-animation-r {
+  0% {
+    transform: none;
+  }
+
+  100% {
+    margin-top: -35px;
+    margin-left: 80px;
+    transform: rotate(-20deg);
+  }
+}
+
+.thigh-animation-l {
+  animation: 1s infinite linear alternate thigh-animation-l;
+}
+
+@keyframes thigh-animation-l {
+  0% {
+    border-radius: 60% 20% 60% 60%;
+    ;
+  margin-top: -5px;
+    margin-left: 30px;
+    transform: rotate(-60deg);
+  }
+
+  100% {
+    transform: none;
+  }
+}
+
+.shin-animation-l {
+  animation: 1s infinite linear alternate shin-animation-l;
+}
+
+@keyframes shin-animation-l {
+  0% {
+    margin-top: -35px;
+    margin-left: 80px;
+    transform: rotate(-20deg);
+  }
+
+  100% {
+    transform: none;
+  }
+}
+
+.walk {
+  animation: 10s infinite linear walk;
+}
+
+@keyframes walk {
+  0% {
+  }
+
+  100% {
+    margin-left: 100%;
+  }
+}
